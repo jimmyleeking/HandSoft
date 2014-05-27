@@ -4,9 +4,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.widget.TextView;
-import com.handos.easyutil.android.BaseActivity;
-import com.handos.easyutil.android.EasyThreadException;
-import com.handos.easyutil.android.EasyThreadMethod;
+import com.handsoft.easyutil.android.activity.BaseActivity;
+import com.handos.easyutil.android.easythread.EasyThreadMethod;
 
 
 /**
