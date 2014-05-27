@@ -1,4 +1,4 @@
-package com.handsoft.easyutil.android.activity;
+package com.handos.easyutil.android.activity;
 import android.app.Activity;
 import android.os.Handler;
 import com.handos.easyutil.android.easythread.EasyThread;

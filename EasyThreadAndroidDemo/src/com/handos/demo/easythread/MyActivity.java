@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.widget.TextView;
-import com.handsoft.easyutil.android.activity.BaseActivity;
+import com.handos.easyutil.android.activity.BaseActivity;
 import com.handos.easyutil.android.easythread.EasyThreadMethod;
 
 
@@ -25,7 +25,7 @@ public class MyActivity extends BaseActivity {
         textView=(TextView)findViewById(R.id.hello);
 
 
-            runInBackground("runCallBack", new Handler.Callback(){
+        runInBackground("runCallBack", new Handler.Callback(){
 
                         @Override
                         public boolean handleMessage(Message message) {
@@ -35,6 +35,7 @@ public class MyActivity extends BaseActivity {
                     }
             );
 
+        runInBackground("run");
         Log.d("GOOD","OK,Loading the Activity is Finish!");
     }
 
@@ -47,7 +48,7 @@ public class MyActivity extends BaseActivity {
         {
             try {
                 Thread.sleep(1000);
-                Log.d("GOOD",String.format("%d :Background Thread Say Hello World,Nice!",i));
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
