@@ -1,4 +1,4 @@
-package com.handos.annotation;
+package com.handos.easyutil.android;
 
 import java.lang.annotation.*;
 

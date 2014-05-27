@@ -56,6 +56,8 @@ public class FileUtil {
 
         return null;
     }
+
+
     public static StringBuilder ReadFileMethod(String url) {
         File file = new File(url);
         BufferedReader reader = null;
@@ -101,4 +103,5 @@ public class FileUtil {
 
         return null;
     }
+
 }

@@ -1,18 +1,18 @@
 package com.handos.demo.easythread;
-
-import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.widget.TextView;
-import com.handos.annotation.EasyThreadMethod;
-import com.handos.exception.EasyThreadException;
-import com.handos.util.EasyThread;
-import com.handos.util.ICallBack;
+import com.handos.easyutil.android.BaseActivity;
+import com.handos.easyutil.android.EasyThreadException;
+import com.handos.easyutil.android.EasyThreadMethod;
+
 
 /**
  * 测试安卓程序
  */
-public class MyActivity extends Activity {
+public class MyActivity extends BaseActivity {
 
 
     TextView textView;
@@ -24,30 +24,22 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         textView=(TextView)findViewById(R.id.hello);
-        try {
-            EasyThread.runInBackground(MyActivity.this, "run");
 
-            EasyThread.runInBackground(MyActivity.this,"runCallBack",myCallBack
+
+            runInBackground("runCallBack", new Handler.Callback(){
+
+                        @Override
+                        public boolean handleMessage(Message message) {
+                            textView.setText("good");
+                            return false;
+                        }
+                    }
             );
-        } catch (EasyThreadException e) {
-            e.printStackTrace();
-        }
+
         Log.d("GOOD","OK,Loading the Activity is Finish!");
     }
 
-    ICallBack myCallBack=new ICallBack() {
-        @Override
-        public void result(Object result) {
-            if(result!=null)
-            {
-                Log.d("GOOD",String.format("Call Back,the result is %s",result.toString()));
 
-            }else
-            {
-                Log.d("GOOD","Call Back ,no result.");
-            }
-        }
-    };
 
     @EasyThreadMethod(methodName = "runCallBack")
     public String changeText(){
@@ -56,6 +48,7 @@ public class MyActivity extends Activity {
         {
             try {
                 Thread.sleep(1000);
+                Log.d("GOOD",String.format("%d :Background Thread Say Hello World,Nice!",i));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

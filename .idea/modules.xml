@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EasyThreadAndroidDemo/EasyThreadAndroidDemo.iml" filepath="$PROJECT_DIR$/EasyThreadAndroidDemo/EasyThreadAndroidDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/EasyUtil/EasyUtil.iml" filepath="$PROJECT_DIR$/EasyUtil/EasyUtil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyUtil4Android/EasyUtil4Android.iml" filepath="$PROJECT_DIR$/EasyUtil4Android/EasyUtil4Android.iml" />
     </modules>
   </component>
 </project>
