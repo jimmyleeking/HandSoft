@@ -1,4 +1,4 @@
-package com.handos.easyutil.android;
+package com.handos.easyutil.android.easythread;
 
 /**
  * Created by jimmylee on 5/10/14.

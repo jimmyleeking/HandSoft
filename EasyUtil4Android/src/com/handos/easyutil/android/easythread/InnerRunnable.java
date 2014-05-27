@@ -1,4 +1,4 @@
-package com.handos.easyutil.android;
+package com.handos.easyutil.android.easythread;
 
 import android.os.Handler;
 import android.os.Message;

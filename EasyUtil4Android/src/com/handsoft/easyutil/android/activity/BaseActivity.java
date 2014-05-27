@@ -1,9 +1,8 @@
-package com.handos.easyutil.android;
+package com.handsoft.easyutil.android.activity;
 import android.app.Activity;
-import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
+import com.handos.easyutil.android.easythread.EasyThread;
+import com.handos.easyutil.android.easythread.EasyThreadException;
 
 
 /**
@@ -18,7 +17,7 @@ public abstract class BaseActivity extends Activity  {
     protected void runInBackground(String methodName)
     {
         try {
-            EasyThread.runInBackground(this,methodName);
+            EasyThread.runInBackground(this, methodName);
         } catch (EasyThreadException e) {
             e.printStackTrace();
         }
