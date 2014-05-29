@@ -27,13 +27,13 @@ public class MyActivity extends BaseActivity {
 
         runInBackground("runCallBack", new Handler.Callback(){
 
-                        @Override
-                        public boolean handleMessage(Message message) {
-                            textView.setText("good");
-                            return false;
-                        }
+                    @Override
+                    public boolean handleMessage(Message message) {
+                        textView.setText("good");
+                        return false;
                     }
-            );
+                }
+        );
 
         runInBackground("run");
         Log.d("GOOD","OK,Loading the Activity is Finish!");
@@ -52,7 +52,6 @@ public class MyActivity extends BaseActivity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
 
         }
         return "Very Good";
